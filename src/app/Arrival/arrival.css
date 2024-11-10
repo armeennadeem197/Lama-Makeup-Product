@@ -1,0 +1,34 @@
+.new-arrival-container {
+    padding: 20px;
+    background-color:pink;
+  }
+  
+  .new-arrival-links ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .new-arrival-links li {
+    margin-right: 15px;
+  }
+  
+  .new-arrival-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .new-arrival-links a:hover {
+    color: #ff6347; 
+  }
+  
+  /* Styling for Product Cards */
+  .product-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  

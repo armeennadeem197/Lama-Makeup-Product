@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:rgb(172, 111, 121);
+}
+
+/* Logo or Name */
+.name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Top navigation links */
+.navigation {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation li {
+  margin-left: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #ff6347;
+}
+
+/* Hamburger (Side menu button) */
+.hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Side menu */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sideMenu.active {
+  left: 0;
+}
+
+.sideMenu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sideMenu li {
+  padding: 15px;
+}
+
+.sideMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sideMenu a:hover {
+  color: #ff6347;
+}
+
+/* Close button inside side menu */
+.cut {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+}

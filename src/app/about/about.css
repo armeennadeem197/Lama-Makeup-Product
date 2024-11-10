@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:pink; /* Light background for contrast */
+}
+
+/* About Section */
+.about {
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Flex Container */
+.content {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between items */
+}
+
+/* Video Container */
+.video-container {
+    flex: 1; /* Allow video container to grow */
+    margin-right: 20px; /* Space between video and text */
+}
+
+/* Text Container */
+.text-container {
+    flex: 1; /* Allow text container to grow */
+}
+
+/* Headings */
+.about h1 {
+    font-size: 2.5em; /* Larger font size for main heading */
+    color: #0a0a0a; /* Dark color for contrast */
+    margin: 20px 0; /* Space above and below the heading */
+    text-align: center; /* Center the heading */
+}
+
+/* Paragraphs */
+.about p {
+    font-size: 1.1em; /* Base font size for paragraphs */
+    color: #0c0c0c; /* Dark color for text */
+    margin: 20px 0; /* Space above and below the paragraph */
+    text-align: center; /* Center the paragraph text */
+}
+
+/* Video Styles */
+.about video {
+    display: block; /* Ensure video is treated as a block element */
+    width: 100%; /* Full width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for video */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+
+    .video-container {
+        margin-right: 0; /* Remove margin for stacked layout */
+        margin-bottom: 20px; /* Space below video */
+    }
+
+    .about {
+        padding: 15px; /* Adjust padding on smaller screens */
+    }
+
+    .about h1 {
+        font-size: 2em; /* Smaller font size on mobile */
+    }
+
+    .about p {
+        font-size: 1em; /* Base paragraph size */
+    }
+}

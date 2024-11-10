@@ -1,0 +1,102 @@
+/* hero.css */
+
+/* Main container - side-by-side layout */
+.hero-container {
+    background-color:pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Allows positioning of pseudo-elements */
+  }
+  
+  /* Left side - Image */
+  .hero-image {
+    flex: 1; /* Takes up 50% of the width */
+    height: 100%; /* Make the image fill the full height */
+    overflow: hidden; /* Prevent overflow */
+    border-radius: 15px; /* Rounded corners for image */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the full div */
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+  }
+  
+  /* Scale effect on hover */
+  .hero-image:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Right side - Text content */
+  .hero-text {
+    flex: 1; /* Takes up 50% of the width */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    text-align: center; /* Center-align text */
+    color: #000; /* Text color */
+    position: relative; /* Allows positioning of pseudo-elements */
+  }
+  
+  /* Adding a subtle background to the text area */
+  .hero-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px; /* Rounded corners */
+    z-index: 1; /* Behind text */
+  }
+  
+  /* Title styling */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold; /* Make title bold */
+    margin-bottom: 15px;
+    color:#000; /* Soft gold for contrast */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    position: relative; /* Allows positioning above overlay */
+    z-index: 2; /* Above overlay */
+    width: 100%; /* Allow wrapping */
+    max-width: 600px; /* Limit width */
+    line-height: 1.2; /* Adjust line height */
+  }
+  
+  /* Description styling */
+  .hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    position: relative; /* Allows positioning above overlay */
+    z-index: 2; /* Above overlay */
+    width: 100%; /* Allow wrapping */
+    max-width: 600px; /* Limit width */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      height: auto; /* Adjust height for mobile */
+    }
+  
+    .hero-image, .hero-text {
+      flex: none;
+      width: 100%; /* Full width for both on mobile */
+    }
+  
+    .hero-image img {
+      height: 50vh; /* Reduce image height for mobile */
+    }
+  }
+  

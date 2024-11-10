@@ -1,0 +1,171 @@
+
+.productCard {
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color:#fff;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Hover effect */
+  .productCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sales Badge */
+  .salesBadge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #d63384;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Product Image */
+  .productImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .productCard:hover .productImage {
+    transform: scale(1.05);
+  }
+  
+  /* Product Details */
+  .productDetails {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Product Title */
+  .productTitle {
+    font-size: 1.25rem;
+    color: #d63384;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  /* Stars Rating */
+  .stars {
+    display: flex;
+    gap: 0.25rem;
+    color: #ff9529;
+    font-size: 1.25rem;
+  }
+  
+  /* Price */
+  .price {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  /* Add to Cart Button */
+  .addToCartBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #d63384;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .addToCartBtn:hover {
+    background-color: #ff84c2;
+    color: #333;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Small screens: Adjust product card width */
+  @media (max-width: 600px) {
+    .productCard {
+      max-width: 100%;
+      margin: 0.5rem;
+    }
+  
+    .productTitle {
+      font-size: 1.1rem;
+    }
+  
+    .stars {
+      font-size: 1rem;
+    }
+  
+    .price {
+      font-size: 0.9rem;
+    }
+  
+    .addToCartBtn {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Medium screens (tablets): Adjust product card layout */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .productCard {
+      max-width: 400px;
+    }
+  
+    .productTitle {
+      font-size: 1.15rem;
+    }
+  
+    .stars {
+      font-size: 1.1rem;
+    }
+  
+    .price {
+      font-size: 1rem;
+    }
+  
+    .addToCartBtn {
+      font-size: 1rem;
+      padding: 0.6rem;
+    }
+  }
+  
+  /* Large screens: Keep as default */
+  @media (min-width: 1025px) {
+    .productCard {
+      max-width: 300px;
+    }
+  
+    .productTitle {
+      font-size: 1.25rem;
+    }
+  
+    .stars {
+      font-size: 1.25rem;
+    }
+  
+    .price {
+      font-size: 1rem;
+    }
+  
+    .addToCartBtn {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+  }
+  
